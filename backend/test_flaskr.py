@@ -73,36 +73,7 @@ class TriviaTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 400)
         self.assertEqual(data["error"], 400)
 
-    
-    def test_get_leaderboard_scores_success(self):
-        res = self.client().get("/leaderboard")
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 200)
-
-
-    def  test_post_to_leaderboard_success(self):
-        res = self.client().post("/leaderboard", json={
-            "player": "Karen",
-            "score": 4 
-        })
-
-        data = json.loads(res.data)
-        boad_item = Leaderboard.query.get(data["added"])
-
-        self.assertEqual(res.status_code, 200)
-        self.assertIsNotNone(board_item)
-
-
-    def test_post_to_leaderbord_bad_request(self):
-        res = self.client().post("/leaderboard", json={})
-        data = json.loads(res.data)
-
-        self.assertEqual(res.status_code, 400)
-        self.assertEqual(data["error"], 400)
-
-    
-    
+      
     def test_get_categories_success(self):
         res = self.client().get("/categories")
         self.assertEqual(res.status_code, 200)

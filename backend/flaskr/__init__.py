@@ -98,6 +98,9 @@ def create_app(test_config=None):
         '''
         Endpoint to get all questions.
         '''
+        questions = Question.query.all()
+        categories = Category.query.all()
+        paginated_questions = paginator(request, questions)
 
         if not len(paginated_questions):
             abort(404)
@@ -262,42 +265,6 @@ def create_app(test_config=None):
             "question": question
         })
 
-
-    @app.route("/leaderboard")
-    def get_leaderboard():
-        '''
-        Endpoint to get leaderboard.
-        '''
-        results = Leaderboard.query.order_by(desc(Leaderboard.score)).all()
-        paginated_results = paginator(request, results)
-
-        return jsonify({
-            "results": paginated_results,
-            "totalResults": len(results)
-
-        })
-
-
-    @app.route("/leaderboard", methods=["POST"])
-    def post_to_leaderboard():
-        '''
-        Endpoint to post to leaderboard.
-        '''
-
-        try:
-            player = request.get_json()["player"]
-            score = request.get_json()["score"]
-
-            board_item = Leaderboard(player=player, score=score)
-            board_item.insert()
-
-            return jsonify({
-                "success": True,
-                "added": board_item.id
-            })
-
-        except:
-            abort(400)
 
     """
     @TODO:
