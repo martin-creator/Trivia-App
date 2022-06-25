@@ -50,7 +50,7 @@ def create_app(test_config=None):
     Create an endpoint to handle GET requests
     for all available categories.
     """
-    app.route("/categories")
+    app.route("/categories", methods=["GET"])
     def get_categories():
         '''
         Endpoint to get all categories.
@@ -61,7 +61,7 @@ def create_app(test_config=None):
         }
 
         return jsonify({
-            "categories": formatted_categories"
+            "categories": formatted_categories
             })
 
     """
@@ -80,7 +80,7 @@ def create_app(test_config=None):
 
             return jsonify({
                 "added": category.id,
-                "success": True"
+                "success": True
                 })
         except:
             abort(400)
@@ -263,7 +263,7 @@ def create_app(test_config=None):
         })
 
 
-   @app.route("/leaderboard")
+    @app.route("/leaderboard")
     def get_leaderboard():
         '''
         Endpoint to get leaderboard.
