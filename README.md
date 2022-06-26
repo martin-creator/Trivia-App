@@ -1,4 +1,4 @@
-# Full Stack Trivia Game
+# Full Stack Trivia Game(Udacity Assignment)
 
 Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game. This trivia app was created for them to start holding trivia games and seeing who's the most knowledgeable of the bunch.
 
@@ -8,7 +8,7 @@ The backend code adheres to the PEP 8 style guide and follows common best practi
 
 ## Getting Started
 
-This project makes use of **ReactJS** and **Node** for the frontend and **Flask**, **SQLAlchemy** and **PostgreSQL** for the backend. To be able to run this project locally, all aforementioned packages/libraries must be installed first.
+This project makes use of **ReactJS** and **NodeJS** for the frontend and **Flask**, **SQLAlchemy** and **PostgreSQL** for the backend. To be able to run this project locally, all aforementioned packages/libraries must be installed first.
 
 ### Backend
 
@@ -73,3 +73,6 @@ This will populate the test database with data.
 ## Acknowledgement
 
 - The entire Udacity team!
+
+## Special Shout out
+-Thank you our sessions leads and reviewers for ythe work well done
