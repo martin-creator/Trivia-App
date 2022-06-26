@@ -50,7 +50,7 @@ def create_app(test_config=None):
     Create an endpoint to handle GET requests
     for all available categories.
     """
-    app.route("/categories", methods=["GET"])
+    @app.route("/categories", methods=["GET"])
     def get_categories():
         '''
         Endpoint to get all categories.
@@ -109,7 +109,7 @@ def create_app(test_config=None):
             "questions": paginated_questions,
             "total_questions": len(questions),
             "categories":{
-                category.id: category.type for category in categories
+            category.id: category.type for category in categories
             },
             "current_category": None
 
@@ -232,7 +232,7 @@ def create_app(test_config=None):
     and shown whether they were correct or not.
     """
     @app.route("/quizzes", methods=["POST"])
-    def get_quiz_questions():
+    def get_question_for_quiz():
         '''
         Endpoint to get questions to play the quiz.
 
@@ -242,30 +242,33 @@ def create_app(test_config=None):
 
         data = request.get_json()
 
-        try:
-            previous_questions = data["previous_questions"]
-            quiz_category = data["quiz_category"]
-        except Exception:
-            abort(400)
+        previous_questions = data['previous_questions']
+        quiz_category = data['quiz_category']
 
-
-        if quiz_category:
-            questions = Question.query.filter_by(category=quiz_category).filter(
-                Question.id.notin_(previous_questions)
-            ).all()
-
+        questions = None
+        
+        if quiz_category['type'] == "click":
+            questions = Question.query.all()
         else:
-            questions = Question.query.filter(
-                ~Question.category.in_(previous_questions)
-            ).all()
+            questions = Question.query.filter_by(category=quiz_category['id']).all()
 
-        question = random.choice(questions).format() if questions else None
+        formatted_questions = [question.format() for question in questions]
+
+        potential_questions = []
+
+        for q in formatted_questions:
+            if q['id'] not in previous_questions:
+                potential_questions.append(q)
+
+        selected_question = None
+        if len(potential_questions) > 0:
+            selected_question = random.choice(potential_questions)
 
         return jsonify({
-            "question": question
-        })
-
-
+            'success': True,
+            'question': selected_question
+         })
+    
     """
     @TODO:
     Create error handlers for all expected errors
