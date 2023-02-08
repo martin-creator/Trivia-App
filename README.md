@@ -1,4 +1,4 @@
-# Full Stack Trivia Game(Udacity Assignment)
+# Full Stack Trivia Game(Udacity Assignment-2022)
 
 Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game. This trivia app was created for them to start holding trivia games and seeing who's the most knowledgeable of the bunch.
 
