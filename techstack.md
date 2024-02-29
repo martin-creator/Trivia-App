@@ -3,13 +3,13 @@
 ## Tech Stack
 martin-creator/Trivia-App is built on the following main stack:
 
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
 - [Python](https://www.python.org) – Languages
 - [React](https://reactjs.org/) – Javascript UI Libraries
-- [jQuery](http://jquery.com/) – Javascript UI Libraries
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
-- [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
 - [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- [jQuery](http://jquery.com/) – Javascript UI Libraries
+- [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
 
 Full tech stack [here](/techstack.md)
 
@@ -19,13 +19,13 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 martin-creator/Trivia-App is built on the following main stack:
 
+- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
+- <img width='25' height='25' src='https://img.stackshare.io/service/2303/New_Project__20_.png' alt='Jinja'/> [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1020/OYIaJ1KK.png' alt='React'/> [React](https://reactjs.org/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
-- <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/1839/q5uAkmy7.png' alt='SQLAlchemy'/> [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
-- <img width='25' height='25' src='https://img.stackshare.io/service/2303/New_Project__20_.png' alt='Jinja'/> [Jinja](https://palletsprojects.com/p/jinja/) – Templating Languages & Extensions
 - <img width='25' height='25' src='https://img.stackshare.io/service/3350/8261421.png' alt='React Router'/> [React Router](https://github.com/rackt/react-router) – JavaScript Framework Components
+- <img width='25' height='25' src='https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg' alt='jQuery'/> [jQuery](http://jquery.com/) – Javascript UI Libraries
+- <img width='25' height='25' src='https://img.stackshare.io/service/1839/q5uAkmy7.png' alt='SQLAlchemy'/> [SQLAlchemy](http://www.sqlalchemy.org/) – Object Relational Mapper (ORM)
 
 Full tech stack [here](/techstack.md)
 
@@ -36,7 +36,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [martin-creator/Trivia-App](https://github.com/martin-creator/Trivia-App)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|25<br/>Tools used|02/04/24 <br/>Report generated|
+|25<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
